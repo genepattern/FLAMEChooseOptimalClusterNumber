@@ -1,0 +1,57 @@
+#FLAMEchooseG
+#Mon Jan 12 14:52:38 EST 2009
+JVMLevel=2.7
+author=
+commandLine=<R2.7> <libdir>chooseBestG.SWR.R parseCmdLine <libdir> <mixture.model> <method> <seed> <output.prefix>
+cpuType=any
+description=Determines the optimal number of clusters for each sample, using user?specified criterion.
+fileFormat=zip
+language=R
+name=FLAMEchooseG
+os=any
+p1_MODE=IN
+p1_TYPE=FILE
+p1_default_value=
+p1_description=A .zip file containing mixture modeling results from the FLAMEmixturemodel module
+p1_fileFormat=zip
+p1_name=mixture.model
+p1_optional=
+p1_prefix_when_specified=
+p1_type=java.io.File
+p1_value=
+
+p2_default_value=SWR
+p2_description=Criterion used for determining optimal number of clusters
+p2_fileFormat=
+p2_name=method
+p2_optional=
+p2_prefix_when_specified=
+p2_type=java.lang.String
+p2_value=AIC=Akaike Information Criterion (AIC);BIC=Bayesian Information Criterion (BIC);SWR=Scale-free Weighted Ratio (SWR);distance.ratio=distance ratio;intercluster.distance=intercluster distance
+
+p3_default_value=123456
+p3_description=An integer; the seed fixes random computational processes during computation. This does not need to be changed under most circumstances.
+p3_fileFormat=
+p3_name=seed
+p3_optional=
+p3_prefix_when_specified=
+p3_type=java.lang.Integer
+p3_value=
+p4_default_value=<mixture.model_basename>
+p4_description=A prefix for output files
+p4_fileFormat=
+p4_name=output.prefix
+p4_optional=
+p4_prefix_when_specified=
+p4_type=java.lang.String
+p4_value=
+
+pipelineModel=
+privacy=private
+quality=development
+requiredPatchLSIDs=
+requiredPatchURLs=
+serializedModel=
+taskType=FLAME
+userid=xinlihu
+version=Updated documentation
