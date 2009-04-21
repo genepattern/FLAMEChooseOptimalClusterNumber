@@ -1,4 +1,4 @@
-#FLAMEchooseG
+#FLAMEChooseOptimalClusterNumber
 #Mon Jan 12 14:52:38 EST 2009
 JVMLevel=2.7
 author=
@@ -7,8 +7,9 @@ cpuType=any
 description=Determines the optimal number of clusters for each sample, using user?specified criterion.
 fileFormat=zip
 language=R
-name=FLAMEchooseG
+name=FLAMEChooseOptimalClusterNumber
 os=any
+
 p1_MODE=IN
 p1_TYPE=FILE
 p1_default_value=
@@ -37,6 +38,7 @@ p3_optional=
 p3_prefix_when_specified=
 p3_type=java.lang.Integer
 p3_value=
+
 p4_default_value=<mixture.model_basename>
 p4_description=A prefix for output files
 p4_fileFormat=
@@ -54,4 +56,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=FLAME
 userid=xinlihu
-version=Updated documentation
+version=renamed
