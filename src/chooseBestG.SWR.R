@@ -127,10 +127,10 @@ install.required.packages <- function(libdir)
 {
     if(!is.package.installed(libdir, "mclust02"))
 	{
-		install.package(libdir,,, "mclust02_2.1-17.tar.gz")
+		install.package(libdir, "mclust02_2.1-17.zip", "mclust02_2.1-17.tgz", "mclust02_2.1-17.tar.gz")
 	}
     if(!is.package.installed(libdir, "fpc"))
 	{
-		install.package(libdir,,, "fpc_1.2-3.tar.gz")
+		install.package(libdir, "fpc_1.2-3.zip", "fpc_1.2-3.tgz", "fpc_1.2-3.tar.gz")
 	}
 }
