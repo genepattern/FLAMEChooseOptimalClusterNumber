@@ -74,7 +74,7 @@ if (choose.g.method == "BIC") {
 #	file.remove(BICfile)
 }
 if (choose.g.method == "AIC") {
-	BICfile <- dir("./",pattern = "AIC.txt")
+	AICfile <- dir("./",pattern = "AIC.txt")
 #	file.copy(AICfile,to=g.path)
 	zip.file(libdir = libdir,files = AICfile,outfile = paste(output.prefix,"OptimalG.zip",sep='.'))
 #	file.remove(AICfile)
