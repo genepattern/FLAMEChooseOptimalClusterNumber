@@ -23,7 +23,14 @@ findOptG <- function(concatfiles, retfiles, g.method, dist, g, dim, seed,fileset
 		print(n)
 		assign("files", concatfiles[grep(paste(dist,n,"membership.txt",sep ='.'),concatfiles)])
 		assign("files2",retfiles[grep(paste(dist,n,"ret",sep ='.'),retfiles)])
-		for (i in 1:length(files)) {
+
+		if(length(files) == 0)
+		{
+		    next
+		}
+
+		for (i in 1:length(files))
+		{
 			filename <- strsplit(files[i], paste('\\',n,"membership.txt",sep='.'))[[1]][1]
             filename <- as.character(filename)
 
@@ -64,6 +71,7 @@ findOptG <- function(concatfiles, retfiles, g.method, dist, g, dim, seed,fileset
 			wbratio[row,1] <- filename
 			between[row,1] <- filename
 			#cluster.stats
+
 			concatfile <- read.table(files[i], header= T, sep = "\t")
 		
 			if (g.method == "intercluster.distance" | g.method == "distance.ratio") {
