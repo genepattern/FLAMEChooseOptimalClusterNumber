@@ -62,11 +62,6 @@ on.exit(cleanup())
 #}
 
 #unzip preprocessed data
-#mixtureModelFiles <- unzip.file(MixtureModel, getwd())@extracted
-
-#unzip.file(MixtureModel, temp.dir)
-#mixtureModelFiles <- list.files(temp.dir, full.names=TRUE)
-
 unzip.file(MixtureModel, getwd())
 
 retfiles <- dir("./",pattern = ".ret")
@@ -83,9 +78,6 @@ dim <- model.specs$dim
 
 seed <- as.integer(seed)
 
-#outdir = "bestG"
-#dir.create(outdir)
-
 #collect optimal.g files for each sample
 gfile <- findOptG(
 concatfiles = concatfiles,
@@ -99,15 +91,13 @@ fileset.name = output.prefix)
 
 collectGFiles(gfile,choose.g.method,libdir,output.prefix)
 
-#setwd(outdir)
-
 bestG.range <- c(min(gfile[,2]),max(gfile[,2]))
 bestGSpecs <- c()
 bestGSpecs$bestG.range <- bestG.range
 bestGSpecs$dist <- dist
 bestGSpecs$dim <- dim
 dput(bestGSpecs, paste(output.prefix,"OptimalGSpecs.ret",sep='.'))
-zip.file(libdir = libdir,files = " *OptimalGSpecs.ret",outfile = paste(output.prefix,"OptimalG.zip",sep='.')) #change libdir to where zip.exe is saved
+zip.file(libdir = libdir,files = " *OptimalGSpecs.ret",outfile = paste(output.prefix,"OptimalG.zip",sep='.'))
 
 file.remove(retfiles)
 file.remove(concatfiles)
@@ -115,12 +105,6 @@ file.remove(pairplots)
 file.remove(paramfiles)
 file.remove(locationfiles)
 file.remove(heatmaps)
-
-#zip up all files
-#zip.file(libdir = libdir,files = " *.*",outfile = paste(output.prefix,"OptimalG.zip",sep='.')) #change libdir to where zip.exe is saved
-#outputfile <- paste(outdir,paste(output.prefix,"OptimalG.zip",sep='.'),sep='/')
-
-#return(outputfile)
 }
 
 install.required.packages <- function(libdir)
