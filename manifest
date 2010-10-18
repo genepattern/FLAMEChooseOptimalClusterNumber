@@ -56,4 +56,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=Flow Cytometry
 userid=xinlihu
-version=Fixed bug caused by some clusters not converging for all the samples and issue with files with spaces in name
+version=Fixed zipping of result files on Windows
