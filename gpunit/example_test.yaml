@@ -1,0 +1,7 @@
+name: FLAMEChooseOptimalClusterNumber example
+module: FLAMEChooseOptimalClusterNumber
+params:
+    mixture.model: ftp://ftp.broadinstitute.org/pub/genepattern/example_files/FLAME/SMALLphospho.PreprocessedData.MixtureModel.zip
+    method: "SWR"
+assertions:
+        jobStatus: success
