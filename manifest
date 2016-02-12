@@ -56,4 +56,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=Flow Cytometry
 userid=xinlihu
-version=modified to handle zipping of file names which contain special characters
+version=Pin common.R to match the one built with version 6 of this module 
