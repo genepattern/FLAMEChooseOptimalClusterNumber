@@ -56,4 +56,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=Flow Cytometry
 userid=xinlihu
-version=Pin common.R to match the one built with version 6 of this module 
+version=Update cleanup function to work with PbsJobRunner
